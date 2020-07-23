@@ -1,0 +1,149 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	 background: linear-gradient(rgba(53, 82, 66, 0.5), rgba(47, 80, 63, 0.6)),
+    url(jaguar.jpg) center no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.me{
+	width: 100;
+  position: absolute;
+  color: black;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.me h1{
+	font-family: chiller;
+	font-size: 80px;
+	font-weight: 300;
+	margin-bottom: 30px;
+	text-shadow: 2px 2px 5px #c68c53;
+	animation-name: moveToDown;
+	animation-duration: 2s;    
+}
+.me h2{
+	font-size: 40px;
+	animation-name: moveToUp;
+	animation-duration: 2s;
+	
+}
+.me h2 span{
+  text-transform: uppercase;
+  font-weight: 700;
+  color:black;
+}
+.me p{
+	font-family: "Lucida Console";
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 20px;
+	animation-name: moveToLeft;
+	animation-duration: 2s;
+}
+.icons{
+	width: 100;
+	position: absolute;
+	top: 70%;
+	left:40%;
+	margin: 10px 30px;
+	font-size: 30px;
+	padding: 20px 20px;
+	letter-spacing: 5px;
+	animation-name: moveToRight;
+	animation-duration: 2s;
+}
+.dropbtn{
+	color: #eee;
+	margin: 10px;
+	border: 2px solid #c68c53;
+	border-radius: 50px;
+	padding: 16px;
+	font-size:18px;
+	border-style: outset;
+	outline: none;
+	letter-spacing: 1px;
+	cursor: pointer; 
+	background-color: transparent;
+}
+.dropdown{ 
+	position: absolute;
+	display: inline-block;
+	bottom: 87%;
+	left:90%;
+}
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px
+	rgba(0,0,0,0,2);
+	z-index: 1;
+	right: 0;
+}
+.dropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdwon-content a:hover{
+	background-color: transparent;
+}
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+.dropdown:hover .dropbtn{
+	background-color: black;
+}
+@keyframes moveToDown{
+	0%{
+		transform: translateY(-120px);
+		opacity: 0;
+
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+
+	}
+}
+@keyframes moveToUp{
+	0%{
+		transform: translateY(35px);
+		opacity: 0;
+
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+
+	}
+}
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}@keyframes moveToRight {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
